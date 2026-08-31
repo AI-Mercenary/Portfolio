@@ -14,7 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { FadeIn, SectionLabel } from "./ui";
 
-type Skill = { label: string; Icon: React.ComponentType<{ className?: string }> };
+type Skill = { label: string; Icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }> };
 
 // Best 5 Spider-Man themes for dark bg contrast
 // Miles Morales      → #E8192C  red
