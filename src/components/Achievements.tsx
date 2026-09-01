@@ -6,7 +6,7 @@ import { ACHIEVEMENTS, CO_CURRICULARS, INTERESTS } from "../data";
 
 const ICONS = [<GiTrophyCup size={24} key={0} />, <GiTrophyCup size={24} key={1} />, <GiTrophyCup size={24} key={2} />];
 
-const INTEREST_ICONS: Record<string, React.ComponentType<{ size?: number }>> = {
+const INTEREST_ICONS: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
   GiCricketBat, GiTennisRacket, GiMountainClimbing,
   FaSwimmer, FaCode, FaHandHoldingHeart, FaBiking, FaRunning, FaBookReader, FaMicroscope,
   MdSportsEsports
