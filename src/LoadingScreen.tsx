@@ -85,7 +85,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               {/* Center Glow */}
               <div className="absolute w-24 h-24 md:w-32 md:h-32 bg-[#106b99] rounded-full blur-[40px] opacity-40 mix-blend-screen" />
 
-              {/* Center Spider-Man Head */}
+              {/* Center Spider-Man Head / Logo */}
               <motion.div 
                 className="relative z-10 flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-[3px] border-black bg-black"
                 style={{ boxShadow: "0 0 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(232,25,44,0.3)" }}
@@ -93,8 +93,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               >
-                {/* Fallback to glyph if ultimate-spiderman.png isn't exactly matching, but let's try ultimate-spiderman.png first */}
-                <img src="/icons/34957-2-ultimate-spiderman.png" alt="Spider-Man" className="w-[120%] h-[120%] object-cover object-center" 
+                <img src="/icons/icon.png" alt="Loading Logo" className="w-[80%] h-[80%] object-contain object-center" 
                   onError={(e) => { e.currentTarget.src = "/icons/spider-glyph.svg"; e.currentTarget.className = "w-[60%] h-[60%] object-contain" }} />
               </motion.div>
               
