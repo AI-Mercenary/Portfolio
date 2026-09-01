@@ -7,8 +7,15 @@ export function Cursor() {
   const [clicked, setClicked] = useState(false);
 
   const [onRedBg, setOnRedBg] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || window.matchMedia("(pointer: coarse)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const move = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
       const target = e.target as Element;
@@ -21,11 +28,14 @@ export function Cursor() {
     window.addEventListener("mousedown", down);
     window.addEventListener("mouseup", up);
     return () => {
+      window.removeEventListener("resize", checkMobile);
       window.removeEventListener("mousemove", move);
       window.removeEventListener("mousedown", down);
       window.removeEventListener("mouseup", up);
     };
   }, []);
+
+  if (isMobile) return null;
 
   const onNav = pos.y < 72;
   const color = (onNav || onRedBg) ? "#FFFFFF" : "#E8192C";

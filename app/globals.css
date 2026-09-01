@@ -101,8 +101,10 @@ body {
 }
 
 /* Smooth cursor */
-* { cursor: none; }
-a, button, [role="button"] { cursor: none; }
+@media (pointer: fine) {
+  * { cursor: none; }
+  a, button, [role="button"] { cursor: none; }
+}
 
 /* Progress ring animation */
 @keyframes ring-draw {
