@@ -139,6 +139,7 @@ export const PROJECTS = [
     tech: ["Multi-Agent AI", "RAG", "Semantic Search"],
     img: "/exp/vaultiq.png",
     link: "https://github.com/AI-Mercenary/Vaultiq",
+    live: "https://vaultiq-three-dusky.vercel.app/",
     cat: "AI/ML",
     featured: true,
   },
@@ -148,6 +149,7 @@ export const PROJECTS = [
     tech: ["React Three Fiber", "TypeScript", "shadcn-ui"],
     img: "/exp/starforge.jpg",
     link: "https://github.com/AI-Mercenary/STARFORGE",
+    live: "https://starforge-gaac.vercel.app/",
     cat: "FULLSTACK",
   },
   {
@@ -156,6 +158,7 @@ export const PROJECTS = [
     tech: ["LLM Q&A", "RAG", "Analytics"],
     img: "/exp/lfb.png",
     link: "https://github.com/AI-Mercenary/lifepath-bot-frontend",
+    live: "https://lifepath-bot.vercel.app/",
     cat: "AI/ML",
   },
   {
@@ -164,6 +167,7 @@ export const PROJECTS = [
     tech: ["Gemini 2.0", "LangGraph", "Multi-Agent"],
     img: "/exp/adafit.png",
     link: "https://github.com/AI-Mercenary/ada-fit-backend",
+    live: "https://ada-fit.vercel.app/",
     cat: "AI/ML",
   },
   {
@@ -173,6 +177,7 @@ export const PROJECTS = [
     img: null as string | null,
     icon: "compass",
     link: "https://github.com/AI-Mercenary/Sanchari",
+    live: "https://github.com/AI-Mercenary/Sanchari/releases/tag/v1.0.0",
     cat: "MOBILE",
   },
   {
