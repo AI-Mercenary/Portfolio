@@ -31,10 +31,10 @@ export function Achievements() {
           <p className="text-[10px] uppercase tracking-[3px] mb-3" style={{ color: "#999", fontFamily: "var(--font-mono)" }}>
             Leadership &amp; Co-Curriculars
           </p>
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-3 mb-10">
             {CO_CURRICULARS.map(c => (
-              <span key={c} className="hov text-[10px] px-3 py-1.5 border uppercase tracking-wider font-semibold transition-all duration-150"
-                style={{ borderColor: "#E8192C44", color: "#E8192C", background: "#E8192C11", fontFamily: "var(--font-barlow)" }}>
+              <span key={c} className="hov text-xs md:text-sm px-4 py-2 border uppercase tracking-wider font-bold transition-all duration-150"
+                style={{ borderColor: "#E8192C55", color: "#E8192C", background: "#E8192C11", fontFamily: "var(--font-barlow)", letterSpacing: "1px" }}>
                 {c}
               </span>
             ))}
@@ -42,10 +42,12 @@ export function Achievements() {
           <p className="text-[10px] uppercase tracking-[3px] mb-3" style={{ color: "#999", fontFamily: "var(--font-mono)" }}>
             Interests
           </p>
-          <div className="flex flex-wrap gap-2">
-            {INTERESTS.map(i => {
+          <div className="flex flex-wrap gap-2 md:gap-3">
+            {INTERESTS.map((i, index) => {
               const Icon = INTEREST_ICONS[i.icon];
-              return <Chip key={i.label} label={i.label} icon={Icon ? <Icon size={14} /> : undefined} dark />;
+              // Alternating subtle HUD colors for the icons to make them pop while keeping text white
+              const iconColor = index % 2 === 0 ? "#0ABFFF" : "#FFD700";
+              return <Chip key={i.label} label={i.label} icon={Icon ? <Icon size={16} color={iconColor} /> : undefined} dark />;
             })}
           </div>
         </FadeIn>
