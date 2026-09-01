@@ -20,7 +20,7 @@ export function Projects() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-14 mb-10">
           {PROJECTS.map((p, i) => (
             <FadeIn key={p.title} delay={i * 0.05}>
-              <ProjectCard title={p.title} desc={p.desc} img={p.img} link={p.link} icon={p.icon} accent="#FFD700" dark />
+              <ProjectCard title={p.title} desc={p.desc} img={p.img} link={p.link} live={(p as any).live} icon={p.icon} accent="#FFD700" dark />
             </FadeIn>
           ))}
         </div>
