@@ -17,7 +17,7 @@ export function Hero() {
       <img src="/icons/web-pattern.svg" alt="" aria-hidden="true"
         className="absolute -top-24 -left-24 w-[520px] h-[520px] pointer-events-none select-none"
         style={{ opacity: 0.035, zIndex: 0 }} />
-      <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 w-full lg:w-[52%]">
+      <div className="relative z-10 flex flex-col justify-center px-5 md:px-16 lg:px-24 py-20 w-full lg:w-[52%]">
         <motion.div className="flex flex-col gap-6" variants={container} initial="hidden" animate="show">
           <motion.div variants={item}>
             <h1 className="font-black leading-none"

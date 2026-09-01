@@ -49,7 +49,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
           <div className="relative flex flex-col items-center justify-center">
             
             {/* The HUD Rings Container */}
-            <div className="relative flex items-center justify-center w-80 h-80 md:w-[450px] md:h-[450px]">
+            <div className="relative flex items-center justify-center w-72 h-72 sm:w-80 sm:h-80 md:w-[450px] md:h-[450px]">
               
               {/* Outer Blue Tech Ring */}
               <motion.svg className="absolute w-full h-full opacity-60" viewBox="0 0 100 100"
